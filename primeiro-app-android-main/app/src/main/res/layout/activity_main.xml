@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    ConstraintLayout é um layout flexível que permite posicionar e dimensionar
+    componentes (views) de forma relativa uns aos outros. É o layout recomendado
+    pelo Google para criar interfaces complexas e responsivas.
+-->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,6 +13,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- ImageView é usado para exibir imagens. -->
     <ImageView
         android:id="@+id/logo_android"
         android:layout_width="wrap_content"
@@ -17,6 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- TextView é usado para exibir textos estáticos. -->
     <TextView
         android:id="@+id/text_view"
         android:layout_width="0dp"
@@ -29,7 +36,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"/>
 
-    <!-- Campo de E-mail atualizado com novo ID -->
+    <!--
+        EditText é um campo de texto onde o usuário pode digitar informações.
+        - android:id: Identificador único do componente, usado no código Kotlin.
+        - android:hint: Texto de dica que aparece quando o campo está vazio.
+        - android:inputType: Define o tipo de teclado a ser exibido (neste caso, para e-mail).
+    -->
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
@@ -43,7 +55,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view"/>
 
-    <!-- Novo campo de Senha -->
+    <!--
+        Este é o novo campo para a senha.
+        - android:inputType="textPassword": Faz com que o texto digitado seja
+          oculto por pontos, garantindo a privacidade da senha.
+    -->
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
@@ -57,7 +73,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
-    <!-- Botão atualizado com novo ID -->
+    <!--
+        Button é um botão clicável.
+        - android:text: O texto exibido no botão.
+        - app:layout_constraintTop_toBottomOf: "Constraint" que posiciona o topo
+          deste botão abaixo da parte inferior do campo de senha (editTextPassword).
+    -->
     <Button
         android:id="@+id/buttonShowData"
         android:layout_width="match_parent"
